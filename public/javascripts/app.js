@@ -65,6 +65,6 @@ function createLoginHistoryComponent(){
 
 function clearAllComponents(){
 	document.getElementById("chatterFeed").innerHTML = "";
-	document.getElementById("iFollowComponent").innerHTML = "";
-	document.getElementById("loginHistoryComponent").innerHTML = "";
+	//document.getElementById("iFollowComponent").innerHTML = "";
+	//document.getElementById("loginHistoryComponent").innerHTML = "";
 }
