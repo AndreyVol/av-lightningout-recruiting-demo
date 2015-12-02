@@ -33,6 +33,7 @@ function setupLightning(callback) {
 	        function() {
 				_lightningReady = true;
 				document.getElementById("chatterFeedButton").style.display = "";
+				document.getElementById("iFollowButton").style.display = "";
 				if (typeof callback === "function") {
 					callback();
 				}
