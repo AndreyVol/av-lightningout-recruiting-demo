@@ -34,6 +34,7 @@ function setupLightning(callback) {
 				_lightningReady = true;
 				document.getElementById("chatterFeedButton").style.display = "";
 				document.getElementById("iFollowButton").style.display = "";
+				document.getElementById("loginHistoryButton").style.display = "";
 				if (typeof callback === "function") {
 					callback();
 				}
@@ -42,13 +43,28 @@ function setupLightning(callback) {
 }
 
 function createChatterFeed(type, subjectId) {
+	clearAllComponents();
     setupLightning(function() {
 		$Lightning.createComponent("forceChatter:feed", {type: type, subjectId: subjectId}, "chatterFeed"); 
     });
 }
 
 function createIFollowComponent(){
+	clearAllComponents();
 	setupLightning(function(){
 		$Lightning.createComponent("roreblciflw3:IFollowList", null, "iFollowComponent");
 	})
+}
+
+function createLoginHistoryComponent(){
+	clearAllComponents();
+	setupLightning(function(){
+		$Lightning.createComponent("roreblcloghist:UsersLoginHistory", null, "iFollowComponent");
+	})
+}
+
+function clearAllComponents(){
+	document.getElementById("chatterFeed").innerHTML = "";
+	document.getElementById("iFollowComponent").innerHTML = "";
+	document.getElementById("loginHistoryComponent").innerHTML = "";
 }
