@@ -59,7 +59,7 @@ function createIFollowComponent(){
 function createLoginHistoryComponent(){
 	clearAllComponents();
 	setupLightning(function(){
-		$Lightning.createComponent("roreblcloghist:UsersLoginHistory", null, "iFollowComponent");
+		$Lightning.createComponent("roreblcloghist:UsersLoginHistory", null, "loginHistoryComponent");
 	})
 }
 
