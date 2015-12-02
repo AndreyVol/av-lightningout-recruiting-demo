@@ -43,21 +43,21 @@ function setupLightning(callback) {
 }
 
 function createChatterFeed(type, subjectId) {
-	clearAllComponents();
+	//clearAllComponents();
     setupLightning(function() {
 		$Lightning.createComponent("forceChatter:feed", {type: type, subjectId: subjectId}, "chatterFeed"); 
     });
 }
 
 function createIFollowComponent(){
-	clearAllComponents();
+	//clearAllComponents();
 	setupLightning(function(){
 		$Lightning.createComponent("roreblciflw3:IFollowList", null, "iFollowComponent");
 	})
 }
 
 function createLoginHistoryComponent(){
-	clearAllComponents();
+	//clearAllComponents();
 	setupLightning(function(){
 		$Lightning.createComponent("roreblcloghist:UsersLoginHistory", null, "loginHistoryComponent");
 	})
