@@ -46,3 +46,9 @@ function createChatterFeed(type, subjectId) {
 		$Lightning.createComponent("forceChatter:feed", {type: type, subjectId: subjectId}, "chatterFeed"); 
     });
 }
+
+function createIFollowComponent(){
+	setupLightning(function(){
+		$Lightning.createComponent("roreblciflw3:IFollowList", {type: type, subjectId: subjectId}, "iFollowComponent");
+	})
+}
