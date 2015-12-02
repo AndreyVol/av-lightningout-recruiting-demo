@@ -43,19 +43,28 @@ function setupLightning(callback) {
 }
 
 function createChatterFeed(type, subjectId) {
+	clearAllComponents();
     setupLightning(function() {
 		$Lightning.createComponent("forceChatter:feed", {type: type, subjectId: subjectId}, "chatterFeed"); 
     });
 }
 
 function createIFollowComponent(){
+	clearAllComponents();
 	setupLightning(function(){
 		$Lightning.createComponent("roreblciflw3:IFollowList", null, "iFollowComponent");
 	})
 }
 
 function createLoginHistoryComponent(){
+	clearAllComponents();
 	setupLightning(function(){
 		$Lightning.createComponent("roreblcloghist:UsersLoginHistory", null, "loginHistoryComponent");
 	})
+}
+
+function clearAllComponents(){
+	document.getElementById("chatterFeed").style.display = "none";
+	document.getElementById("iFollowComponent").style.display = "none";
+	document.getElementById("loginHistoryComponent").style.display = "none";
 }
